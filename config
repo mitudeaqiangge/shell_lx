@@ -1,0 +1,9 @@
+root_passwd=redhat
+aotu_yes=yes
+aotu_y=y
+third_part=/usr/local/ranner
+backup_name=bak-`date +%Y%m%d-%H%M%S`
+time_zone="Asia/Shanghai"
+vnc_passwd=root123
+vnc_size=1200x600
+auto_tmp=/tmp/auto_config_tmp

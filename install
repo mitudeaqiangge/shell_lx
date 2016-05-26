@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo 'This script will config the cluster automaticly. '
+while true; do
+    read -p "Do you wish to continue ... yes|no [yes]" yn
+    case $yn in
+        y|Y|YES ) break ;;
+        n|N|NO ) exit ;;
+        '' ) break ;;
+        * ) echo "Please answer y or n." ;;
+    esac
+done
+
+sh scripts/check_nodes.sh
+sh scripts/third_part.sh
+sh scripts/config_ssh.sh
+sh scripts/config_se.sh
+sh scripts/nfs.sh
+sh scripts/config_nis.sh
+sh scripts/config_ntp.sh
+sh scripts/config_vnc.sh
+sh scripts/del_dup.sh
+
+echo "All Done."
